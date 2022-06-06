@@ -81,3 +81,61 @@ public class Estatico {
 Resultado obtenido:
 
 La suma es: 7
+
+## 116. Ejercicio 1 - Obtener el perimetro y area de un cuadrilatero 
+Construir un programa que calcule el area y el perimetro de un cuadrilatero dada la longitud de sus dos lados. Los valores de la longitud deberan introducirse por linea de ordenes. Si es un cuadrado, solo se proporcionara la longitud de uno de los lados al constructor. 
+
+**Solucion**
+
+Diagrama de clases:
+
+![Diagrama de clases UML](dc.PNG)
+
+```java
+package Ejercicio1;
+public class Cuadrilatero {
+    //Atributos
+    private float lado1;
+    private float lado2;
+    //Metodos
+    //Metodo constructor 1 (Cuadrilatero)
+    public Cuadrilatero(float lado1, float lado2) {
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+    }
+    //Metodo constructor 2 (Cuadrado)
+    public Cuadrilatero(float lado1) {
+        this.lado1 = this.lado2 = lado1;
+    }
+    public float getPerimetro(){
+        float perimetro = 2 * (lado1 + lado2);
+        return perimetro;
+    }
+    public float getArea(){
+        float area = (lado1 * lado2);
+        return area;
+    }
+}
+```
+
+```java
+package Ejercicio1;
+import javax.swing.JOptionPane;
+public class Principal {
+    public static void main(String[] args) {
+        Cuadrilatero c1;
+        float lado1,lado2;    
+        lado1 = Float.parseFloat(JOptionPane.showInputDialog("Digite el lado1: "));
+        lado2 = Float.parseFloat(JOptionPane.showInputDialog("Digite el lado2: "));      
+        if(lado1 == lado2){ //Es un cuadrado
+            c1 = new Cuadrilatero(lado1);
+        }
+        else{
+            c1 = new Cuadrilatero(lado1, lado2);
+        }     
+        System.out.println("El perimetro es: "+c1.getPerimetro());
+        System.out.println("El area es: "+c1.getArea());
+    }
+}
+```
+

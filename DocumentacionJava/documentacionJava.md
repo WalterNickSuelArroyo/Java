@@ -139,3 +139,85 @@ public class Principal {
 }
 ```
 
+## 117. Ejercicio 2 - Mover un objeto en un tablero
+Construir un programa que permita dirigir el movimiento de un objeto dentro de un tablero y actualice su posicion dentro del mismo. Los movimientos posibles son ARRIBA, ABAJO, IZQUIERDA Y DERECHA. Tras cada movimiento el programa mostrara la nueva direccion elegida y las coordenadas de situacion del objeto dentro del tablero.
+
+**Solucion:**
+![Diagrama de clases ejercicio 2](dc2.PNG)
+
+```java
+package Ejercicio2;
+public class Tablero {
+    private int x;
+    private int y;
+    //Constructor
+    public Tablero(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public void moverArriba(int incremento){
+        y+=incremento;
+    }
+    public void moverAbajo(int incremento){
+        y-=incremento;
+    }
+    public void moverDerecha(int incremento){
+        x+=incremento;
+    }
+    public void moverIzquierda(int incremento){
+        x-=incremento;
+    }
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+}
+
+```
+
+```java
+package Ejercicio2;
+import java.util.Scanner;
+public class Principal {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        Tablero t1;
+        int x,y,opcion,incremento=0;
+        System.out.print("Digite la coordenada inicial de X: ");
+        x=entrada.nextInt();
+        System.out.print("Digite la coordenada inicial de Y: ");
+        y=entrada.nextInt();
+        //Posicion inicial del objeto
+        t1=new Tablero(x, y);
+        do {            
+            System.out.println("\n\t.:MENU:.");
+            System.out.println("1. Mover hacia ARRIBA");
+            System.out.println("2. Mover hacia ABAJO");
+            System.out.println("3. Mover hacia DERECHA");
+            System.out.println("4. Mover hacia IZQUIERDA");
+            System.out.println("5. Salir");
+            System.out.print("Digite la opcion: ");
+            opcion=entrada.nextInt();
+            
+            if(opcion>=1 && opcion<=4){
+                System.out.print("\nDigite la cantidad de espacios a moverse: ");
+                incremento = entrada.nextInt();
+            }
+            switch(opcion){
+                case 1: t1.moverArriba(incremento); break;
+                case 2: t1.moverAbajo(incremento); break;
+                case 3: t1.moverDerecha(incremento); break;
+                case 4: t1.moverIzquierda(incremento); break;
+                case 5: break;
+                default: System.out.print("Error, se equivoco de opcion de menu"); break;
+            }
+            System.out.print("\nPosicion Actual (X,Y): ("+t1.getX()+" , "+t1.getY()+")"); 
+        } while (opcion !=5);
+    }
+}
+
+```
+
+

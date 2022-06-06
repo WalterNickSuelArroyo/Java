@@ -1,13 +1,9 @@
-
 package Ejercicio1;
-
 public class Cuadrilatero {
     //Atributos
     private float lado1;
     private float lado2;
-    
     //Metodos
-    
     //Metodo constructor 1 (Cuadrilatero)
     public Cuadrilatero(float lado1, float lado2) {
         this.lado1 = lado1;

@@ -295,5 +295,77 @@ public class Principal {
 }
 ```
 
-- Con entrada.nextLine(); corregimos errores que a veces salen cuando ejecutamos programas que nos pidan datos de tipo string
+- Con entrada.nextLine(); corregimos errores que a veces salen cuando ejecutamos programas que nos pidan datos de tipo string. Esto ocurre porque el buffer no queda completamente vacio para poner el siguiente dato
 - Para poner datos de tipo decimal en java se tiene que usar el punto y no la coma.
+
+## 119. Ejercicio 4 - Hacer un programa para una competencia de atletismo
+Construir un programa para una competencia de atletismo, el programa debe gestionar una serie de atletas caracterizados por su numero de atleta, nombre y tiempo de carrera, al final el programa debe mostrar los datos del atleta ganador de la carrera.
+
+![Diagrama de clases ejercicio 3](dc4.PNG)
+
+```java
+package Ejercicio4;
+public class Atleta {
+    private int numeroAtleta;
+    private String nombre;
+    private float tiempoCarrera;
+    //Constructor
+    public Atleta(int numeroAtleta, String nombre, float tiempoCarrera) {
+        this.numeroAtleta = numeroAtleta;
+        this.nombre = nombre;
+        this.tiempoCarrera = tiempoCarrera;
+    }
+    public float getTiempoCarrera(){
+        return tiempoCarrera;
+    }
+    public String mostrarDatosGanador(){
+        return "Numero de Atleta: "+numeroAtleta+"\nNombre Atleta: "+nombre+"\nTiempo Carrera: "+tiempoCarrera+"\n";
+    }
+}
+```
+
+```java
+package Ejercicio4;
+import java.util.Scanner;
+public class Principal {
+    public static int indiceGanador(Atleta atletas[]){
+        float tiempoCarrera;
+        int indice = 0;
+        tiempoCarrera = atletas[indice].getTiempoCarrera();
+        for (int i = 1; i < atletas.length; i++) {
+            if (atletas[i].getTiempoCarrera()<tiempoCarrera) {
+                tiempoCarrera = atletas[i].getTiempoCarrera();
+                indice = i;
+            } 
+        }
+        return indice;
+    }
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int numeroAtleta,nAtletas,indiceAtletaGanador;
+        float tiempoCarrera;
+        
+        System.out.print("Digite el numero de atletas a participar: ");
+        nAtletas = entrada.nextInt();   
+        //Creamos los objetos para cada atleta
+        Atleta atletas[] = new Atleta[nAtletas];
+        
+        for (int i = 0; i < atletas.length; i++) {
+            System.out.println("\nDigite los datos del atleta "+(i+1)+": ");
+            System.out.print("Introduzca Numero de atleta: ");
+            numeroAtleta = entrada.nextInt();
+            entrada.nextLine();
+            System.out.print("Introduzca Nombre de atleta: ");
+            nombre = entrada.nextLine();
+            System.out.print("Introduzca tiempo de carrera: ");
+            tiempoCarrera = entrada.nextFloat();
+            
+            atletas[i] = new Atleta(numeroAtleta, nombre, tiempoCarrera);
+        }
+        indiceAtletaGanador = indiceGanador(atletas);
+        System.out.println("\nEl atleta ganador es: ");
+        System.out.println(atletas[indiceAtletaGanador].mostrarDatosGanador());
+    }
+}
+```

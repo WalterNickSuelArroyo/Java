@@ -1,7 +1,4 @@
-
 package Ejercicio2;
-
-
 public class Tablero {
     private int x;
     private int y;
@@ -22,14 +19,10 @@ public class Tablero {
     public void moverIzquierda(int incremento){
         x-=incremento;
     }
-
     public int getX() {
         return x;
     }
-
     public int getY() {
         return y;
     }
-    
-    
 }

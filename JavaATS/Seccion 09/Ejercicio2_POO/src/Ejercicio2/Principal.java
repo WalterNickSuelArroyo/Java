@@ -1,22 +1,16 @@
-
 package Ejercicio2;
-
 import java.util.Scanner;
-
-
 public class Principal {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Tablero t1;
         int x,y,opcion,incremento=0;
-        
         System.out.print("Digite la coordenada inicial de X: ");
         x=entrada.nextInt();
         System.out.print("Digite la coordenada inicial de Y: ");
         y=entrada.nextInt();
         //Posicion inicial del objeto
         t1=new Tablero(x, y);
-        
         do {            
             System.out.println("\n\t.:MENU:.");
             System.out.println("1. Mover hacia ARRIBA");
@@ -39,9 +33,7 @@ public class Principal {
                 case 5: break;
                 default: System.out.print("Error, se equivoco de opcion de menu"); break;
             }
-            System.out.print("\nPosicion Actual (X,Y): ("+t1.getX()+" , "+t1.getY()+")");
-            
-            
+            System.out.print("\nPosicion Actual (X,Y): ("+t1.getX()+" , "+t1.getY()+")"); 
         } while (opcion !=5);
     }
 }

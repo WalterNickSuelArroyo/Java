@@ -301,7 +301,7 @@ public class Principal {
 ## 119. Ejercicio 4 - Hacer un programa para una competencia de atletismo
 Construir un programa para una competencia de atletismo, el programa debe gestionar una serie de atletas caracterizados por su numero de atleta, nombre y tiempo de carrera, al final el programa debe mostrar los datos del atleta ganador de la carrera.
 
-![Diagrama de clases ejercicio 3](dc4.PNG)
+![Diagrama de clases ejercicio 4](dc4.PNG)
 
 ```java
 package Ejercicio4;
@@ -367,5 +367,69 @@ public class Principal {
         System.out.println("\nEl atleta ganador es: ");
         System.out.println(atletas[indiceAtletaGanador].mostrarDatosGanador());
     }
+}
+```
+
+## 120. Ejercicio 5 - Area y perimetro de triangulos isosceles
+
+Diseñar un programa para trabajar con triangulos isosceles. Para ello defina los atributos necesarios que se requieren, proporcione metodos de consulta, un metodo constructor e implemente metodos para calcular el perimetro y el area de un triangulo, ademas implementar un metodo que a partir de un arreglo de triangulos devuelva el area del triangulo de mayor superficie.
+
+![Diagrama de clases ejercicio 5](dc5.PNG)
+
+```java
+package Ejercicio5;
+public class Triangulo_Isosceles {
+    private double base;
+    private double lado;
+    public Triangulo_Isosceles(double base, double lado) {
+        this.base = base;
+        this.lado = lado;
+    }
+    public double obtenerPerimetro(){
+        double perimetro = 2*lado + base;
+        return perimetro;
+    }
+    public double obtenerArea(){
+        double area = (base*Math.sqrt(lado*lado-(base*base)/4))/2;
+        return area;
+    }
+}
+```
+
+```java
+package Ejercicio5;
+import java.util.Scanner;
+public class Principal {
+    public static double mayorArea(Triangulo_Isosceles triangulos[]){
+        double area;
+        area = triangulos[0].obtenerArea();
+        for (int i = 1; i < triangulos.length; i++) {
+            if(triangulos[i].obtenerArea()>area){
+                area = triangulos[i].obtenerArea();
+            }
+        }
+        return area;
+    }
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double base,lado;
+        int nTriangulos;
+        System.out.print("Digite el numero de triangulos a ingresar: ");
+        nTriangulos = entrada.nextInt();
+        Triangulo_Isosceles triangulos[] = new Triangulo_Isosceles[nTriangulos]; 
+        for (int i = 0; i < triangulos.length; i++) {
+            System.out.println("\nDigite los valores para el triangulo "+(i+1)+":");
+            System.out.print("Introduzca la base: ");
+            base = entrada.nextDouble();
+            System.out.print("Introduzca el lado: ");
+            lado = entrada.nextDouble();
+            
+            triangulos[i] = new Triangulo_Isosceles(base, lado);
+            
+            System.out.println("\nEl perimetro del triangulo es: "+triangulos[i].obtenerPerimetro());
+            System.out.println("El area del triangulo es: "+triangulos[i].obtenerArea());
+        }
+        System.out.println("\nEl area del triangulo de mayor superficie es: "+mayorArea(triangulos));
+    }  
 }
 ```

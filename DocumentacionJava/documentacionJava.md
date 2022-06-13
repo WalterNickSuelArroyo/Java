@@ -433,3 +433,13 @@ public class Principal {
     }  
 }
 ```
+
+## 121. Ejercicio 6 - Operaciones con numeros complejos (parte 1)
+
+Construir un programa para trabajar con 2 numeros complejos, implemente el siguiente menu:
+1. Sumar dos numeros complejos
+2. Multiplicar 2 numeros complejos
+3. Comparar 2 numeros complejos (iguales o no)
+4. Multiplicar un numero complejo por un entero
+
+![Diagrama de clases ejercicio 5](dc6.PNG)

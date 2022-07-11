@@ -2,6 +2,7 @@ package ventana;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 public class Ventana extends JFrame{
     public Ventana(){
@@ -15,8 +16,12 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         JPanel panel = new JPanel(); //Creacion de un panel
+        panel.setLayout(null); //Desactivamos el diseño por defecto
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
-        panel.setBackground(Color.GREEN); //Establecemos el color del panel
+        //panel.setBackground(Color.GREEN); //Establecemos el color del panel
+        JLabel etiqueta = new JLabel(); //Creamos una etiqueta
+        etiqueta.setText("Hola"); //Establecemos el texto de la etiqueta
+        etiqueta.setBounds(100, 100, 50, 30);
+        panel.add(etiqueta); //Agregamos la etiqueta al panel
     }
-    
 }

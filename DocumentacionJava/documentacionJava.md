@@ -443,3 +443,166 @@ Construir un programa para trabajar con 2 numeros complejos, implemente el sigui
 4. Multiplicar un numero complejo por un entero
 
 ![Diagrama de clases ejercicio 5](dc6.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Seccion 13: Interfaces Graficas de Usuario (GUI)
+## 168. Introduccion al capitulo de Interfaces graficas de usuario
+**Objetivos:**
+- Crear sus propias aplicaciones graficas en java
+- Crear interfaces desde codigo o desde el diseñador de NetBeans
+- Utilizar Layouts para sus aplicaciones (layout son diferentes estilos de diseño que podemos poner dentro de las aplicaciones).
+- Crear ejecutables .jar
+- Crear ejecutables .exe
+
+**Contenido:**
+1. Contenedores:
+
+    a) Ventanas (JFrame)
+
+    b) Paneles (JPanel)
+
+2. Componentes:
+
+    a) Etiquetas (JLabel)
+
+    b) Botones (JButton)
+
+    c) Radio Botones (JRadioButton)
+
+    d) Botones de Activacion (JToggleButton)
+
+    e) Caja de texto (JTextField)
+
+    f) Area de texto (JTextArea)
+
+    g) Casillas de verificacion (JCheckBox)
+
+    h) Listas desplegables (JComboBox)
+
+    i) Campo de contraseña (JPasswordField)
+
+    j) Tablas (JTable)
+
+    k) Listas (JList)
+
+3. Eventos:
+
+    a) Oyente de accion (ActionListener)
+
+    b) Oyente de raton (MouseListener)
+
+    c) Metodos de los eventos de raton (MouseEvent)
+
+    d) Oyente del movimiento del raton (MouseMotionListener)
+
+    e) Oyente de la rueda del raton (MouseWheelListener)
+
+    f) Oyente de teclado (KeyListener)
+
+4. Ejercicio 1: Contabilizar clics
+
+5. Ejercicio 2: Escoger deporte favorito
+
+6. Ejercicio 3: Jugar con los colores RGB
+
+7. El diseñador de Interfaces Graficas de NetBeans
+
+8. Ejercicio 4: Interfaz para un grupo de personas
+
+9. Ejercicio 5: Desarrollando un cronometro
+
+10. Ejercicio 6: Interfaz grafica para un login
+
+11. Diseño (Layout):
+
+    a) FlowLayout
+
+    b) BoxLayout
+
+    c) BorderLayout
+
+    d) GridLayout
+
+    e) GridBagLayout
+
+12. Ejercicio 7: Cartelera de cine
+
+13. Barra de menu
+
+    a) Creacion de una Barra de Menu
+
+    b) Submenu y componentes de la Barra de Menu
+
+    c) Menu Desplegable (JPopupMenu)
+
+14. Estilos de Ventana (LookAndFeel)
+
+15. Descargar mas estilos de Ventana (LookAndFeel)
+
+16. Ejercicio 8: Calculadora y Conversor de Divisas
+
+17. Crear ventanas secundarias (JDialog)
+
+18. Mostrar datos en arbol jerarquico (JTree)
+
+19. Eventos en el JTree
+
+20. Ejercicio 9 - Juego de 3 en Raya
+
+21. Crear un ejecutable .exe
+
+# 169. Ventanas (JFrame) - creacion de una ventana
+
+```java
+package ventana;
+import javax.swing.JFrame;
+public class Ventana extends JFrame{
+    public Ventana(){
+        this.setSize(500, 500); //Establecemos el tamaño de la ventana
+    }
+}
+```
+
+```java
+package ventana;
+public class Principal {
+    public static void main(String[] args) {
+        Ventana v1 = new Ventana();
+        v1.setVisible(true); //Hacemos visible la ventana
+    }
+}
+```

@@ -4,11 +4,13 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 public class Ventana extends JFrame{
     public JPanel panel;
@@ -25,7 +27,8 @@ public class Ventana extends JFrame{
     private void iniciarComponentes(){
         colocarPaneles();
         //colocarEtiquetas();
-        colocarBotones();
+        //colocarBotones();
+        colocarRadioBotones();
     }
     private void colocarPaneles(){
         panel = new JPanel(); //Creacion de un panel
@@ -48,6 +51,7 @@ public class Ventana extends JFrame{
         etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(),etiqueta2.getHeight(),Image.SCALE_SMOOTH)));
         panel.add(etiqueta2);
     }
+    
     private void colocarBotones(){
         //Boton 1 - boton de texto
         JButton boton1 = new JButton();
@@ -73,5 +77,27 @@ public class Ventana extends JFrame{
         boton3.setBounds(100, 300, 110, 50);
         boton3.setBorder(BorderFactory.createLineBorder(Color.blue, 4, true));
         panel.add(boton3);
+    }
+    
+    private void colocarRadioBotones(){
+        JRadioButton radioBoton1 = new JRadioButton("Opcion 1", true);
+        radioBoton1.setBounds(50, 100, 200, 50);
+        radioBoton1.setEnabled(true);
+        radioBoton1.setText("Programacion");
+        radioBoton1.setFont(new Font("cooper black",0,20));
+        panel.add(radioBoton1);
+        
+        JRadioButton radioBoton2 = new JRadioButton("Opcion 2", false);
+        radioBoton2.setBounds(50, 150, 100, 50);
+        panel.add(radioBoton2);
+        
+        JRadioButton radioBoton3 = new JRadioButton("Opcion 3", false);
+        radioBoton3.setBounds(50, 200, 100, 50);
+        panel.add(radioBoton3);
+        
+        ButtonGroup grupoRadioBotones = new ButtonGroup();
+        grupoRadioBotones.add(radioBoton1);
+        grupoRadioBotones.add(radioBoton2);
+        grupoRadioBotones.add(radioBoton3);
     }
 }

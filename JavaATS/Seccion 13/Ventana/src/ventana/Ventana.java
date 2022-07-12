@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -66,5 +67,11 @@ public class Ventana extends JFrame{
         boton2.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
         //boton2.setBackground(Color.blue);
         panel.add(boton2);
+        
+        //Boton 3 - boton de bordes
+        JButton boton3 = new JButton();
+        boton3.setBounds(100, 300, 110, 50);
+        boton3.setBorder(BorderFactory.createLineBorder(Color.blue, 4, true));
+        panel.add(boton3);
     }
 }

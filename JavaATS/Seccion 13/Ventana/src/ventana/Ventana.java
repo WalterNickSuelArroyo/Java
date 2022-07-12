@@ -53,6 +53,8 @@ public class Ventana extends JFrame{
         boton1.setBounds(100, 100, 100, 40);
         boton1.setEnabled(true);//Habilita o desabilita un boton
         boton1.setMnemonic('b');//Establecemeos alt+letra
+        boton1.setForeground(Color.BLUE);
+        boton1.setFont(new Font("cooper black", 3, 20));
         panel.add(boton1);
     }
 }

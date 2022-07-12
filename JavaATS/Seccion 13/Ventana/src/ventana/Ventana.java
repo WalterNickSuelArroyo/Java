@@ -48,6 +48,7 @@ public class Ventana extends JFrame{
         panel.add(etiqueta2);
     }
     private void colocarBotones(){
+        //Boton 1 - boton de texto
         JButton boton1 = new JButton();
         boton1.setText("Click");//Establecemos un texto al boton
         boton1.setBounds(100, 100, 100, 40);
@@ -56,5 +57,14 @@ public class Ventana extends JFrame{
         boton1.setForeground(Color.BLUE);
         boton1.setFont(new Font("cooper black", 3, 20));
         panel.add(boton1);
+        
+        //Boton 2 - boton de imagen
+        JButton boton2 = new JButton();
+        boton2.setBounds(100, 200, 100, 40);
+        //boton2.setOpaque(true);
+        ImageIcon imagen2 = new ImageIcon("check.png");
+        boton2.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
+        //boton2.setBackground(Color.blue);
+        panel.add(boton2);
     }
 }

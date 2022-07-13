@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 public class Ventana extends JFrame{
@@ -27,7 +28,7 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         colocarPaneles();
-        colocarBotonesDeActivacion();
+        colocarCajasDeTexto();
     }
     private void colocarPaneles(){
         panel = new JPanel(); //Creacion de un panel
@@ -35,22 +36,12 @@ public class Ventana extends JFrame{
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
     }
     
-    private void colocarBotonesDeActivacion(){
-        JToggleButton botonActivacion1 =  new JToggleButton("Opcion 1",true);
-        botonActivacion1.setBounds(50, 100, 100, 40);
-        panel.add(botonActivacion1);
+    private void colocarCajasDeTexto(){
+        JTextField cajaTexto = new JTextField();
+        cajaTexto.setBounds(50, 50, 200, 30);
+        cajaTexto.setText("Hola");
         
-        JToggleButton botonActivacion2 =  new JToggleButton("Opcion 2",false);
-        botonActivacion2.setBounds(50, 150, 100, 40);
-        panel.add(botonActivacion2);
-        
-        JToggleButton botonActivacion3 =  new JToggleButton("Opcion 3",false);
-        botonActivacion3.setBounds(50, 200, 100, 40);
-        panel.add(botonActivacion3);
-        
-        ButtonGroup grupoBotonesActivados = new ButtonGroup();
-        grupoBotonesActivados.add(botonActivacion1);
-        grupoBotonesActivados.add(botonActivacion2);
-        grupoBotonesActivados.add(botonActivacion3);
+        System.out.println("Texto en la caja: "+cajaTexto.getText());
+        panel.add(cajaTexto);
     }
 }

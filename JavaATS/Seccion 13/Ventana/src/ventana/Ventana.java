@@ -8,6 +8,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -32,7 +33,8 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         colocarPaneles();
-        colocarCasillasDeVerificacion();
+        colocarListasDesplegables();
+        
         
     }
     private void colocarPaneles(){
@@ -41,21 +43,12 @@ public class Ventana extends JFrame{
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
     }
     
-    private void colocarCasillasDeVerificacion(){
-        JCheckBox casillaVerificacion1 = new JCheckBox("Leche");
-        casillaVerificacion1.setBounds(20, 20, 100, 40);
-        panel.add(casillaVerificacion1);
-        
-        JCheckBox casillaVerificacion2 = new JCheckBox("Galleta");
-        casillaVerificacion2.setBounds(20, 50, 100, 40);
-        panel.add(casillaVerificacion2);
-        
-        JCheckBox casillaVerificacion3 = new JCheckBox("Yogurt");
-        casillaVerificacion3.setBounds(20, 80, 100, 40);
-        panel.add(casillaVerificacion3);
-        
-        JCheckBox casillaVerificacion4 = new JCheckBox("Cereal");
-        casillaVerificacion4.setBounds(20, 110, 100, 40);
-        panel.add(casillaVerificacion4);
+    private void colocarListasDesplegables(){
+        String [] paises = {"Peru","Colombia","Paraguay","Ecuador"};
+        JComboBox listaDesplegable = new JComboBox(paises);
+        listaDesplegable.setBounds(20, 20, 100, 30);
+        listaDesplegable.addItem("Argentina");//Añadir objetos a tu lista desplegable
+        listaDesplegable.setSelectedItem("Paraguay");//Seleccionar el primer objeto visto
+        panel.add(listaDesplegable);
     }
 }

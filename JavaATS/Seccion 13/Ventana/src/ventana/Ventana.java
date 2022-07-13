@@ -7,6 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -31,7 +32,7 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         colocarPaneles();
-        colocarAreasDeTexto();
+        colocarCasillasDeVerificacion();
         
     }
     private void colocarPaneles(){
@@ -40,21 +41,21 @@ public class Ventana extends JFrame{
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
     }
     
-    private void colocarAreasDeTexto(){
-        JTextArea areaTexto = new JTextArea();
-        areaTexto.setBounds(20, 20, 300, 200);
-        areaTexto.setText("Escriba el texto aqui...");
-        areaTexto.append("\nEscribe el texto aqui...");//Añade mas texto al area
-        areaTexto.setEditable(true);//Editar el area de texto
+    private void colocarCasillasDeVerificacion(){
+        JCheckBox casillaVerificacion1 = new JCheckBox("Leche");
+        casillaVerificacion1.setBounds(20, 20, 100, 40);
+        panel.add(casillaVerificacion1);
         
-        System.out.println("El texto es: "+ areaTexto.getText());
-        panel.add(areaTexto);
+        JCheckBox casillaVerificacion2 = new JCheckBox("Galleta");
+        casillaVerificacion2.setBounds(20, 50, 100, 40);
+        panel.add(casillaVerificacion2);
         
-        //Barras de desplazamiento
-        JScrollPane barrasDesplazamiento = new JScrollPane(areaTexto);
-        barrasDesplazamiento.setBounds(20, 20, 300, 200);
-        barrasDesplazamiento.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        barrasDesplazamiento.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        panel.add(barrasDesplazamiento);
+        JCheckBox casillaVerificacion3 = new JCheckBox("Yogurt");
+        casillaVerificacion3.setBounds(20, 80, 100, 40);
+        panel.add(casillaVerificacion3);
+        
+        JCheckBox casillaVerificacion4 = new JCheckBox("Cereal");
+        casillaVerificacion4.setBounds(20, 110, 100, 40);
+        panel.add(casillaVerificacion4);
     }
 }

@@ -17,11 +17,13 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
 public class Ventana extends JFrame{
     public JPanel panel;
     
@@ -36,7 +38,8 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         colocarPaneles();
-        colocarCampoDeContraseña();
+        colocarTablas();
+        
         
         
     }
@@ -45,18 +48,26 @@ public class Ventana extends JFrame{
         panel.setLayout(null); //Desactivamos el diseño por defecto
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
     }
-    private void colocarCampoDeContraseña(){
-        JPasswordField campoContraseña = new JPasswordField();
-        campoContraseña.setBounds(20, 20, 150, 30);
-        campoContraseña.setText("hola");
-        panel.add(campoContraseña);
+    private void colocarTablas(){
+        DefaultTableModel modelo = new DefaultTableModel();
         
-        String contraseña = "";
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Edad");
+        modelo.addColumn("Nacionalidad");
         
-        for (int i = 0; i < campoContraseña.getPassword().length; i++) {
-            contraseña += campoContraseña.getPassword()[i];
-        }
+        String [] persona1 = {"Alejandro","21","Peruano"};
+        String [] persona2 = {"Rosa","25","Mexicana"};
         
-        System.out.println("Contraseña: "+ contraseña);
+        modelo.addRow(persona1);
+        modelo.addRow(persona2);
+        
+        JTable tabla = new JTable(modelo);
+        
+        tabla.setBounds(20, 20, 300, 200);
+        panel.add(tabla);
+        
+        JScrollPane scroll = new JScrollPane(tabla, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scroll.setBounds(20, 20, 300, 200);
+        panel.add(scroll);
     }
 }

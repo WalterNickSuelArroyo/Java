@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.util.Arrays;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
@@ -13,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -34,7 +36,7 @@ public class Ventana extends JFrame{
     }
     private void iniciarComponentes(){
         colocarPaneles();
-        colocarListasDesplegables();
+        colocarCampoDeContraseña();
         
         
     }
@@ -43,17 +45,18 @@ public class Ventana extends JFrame{
         panel.setLayout(null); //Desactivamos el diseño por defecto
         this.getContentPane().add(panel);//Agregamos el panel a la ventana
     }
-    
-    private void colocarListasDesplegables(){
-        Persona persona1 = new Persona ("Alejandro Taboada",21,"Peruano");
-        Persona persona2 = new Persona ("Tania Bustamante",20,"Argentina");
-        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-        JComboBox listaDesplegable = new JComboBox(modelo);
+    private void colocarCampoDeContraseña(){
+        JPasswordField campoContraseña = new JPasswordField();
+        campoContraseña.setBounds(20, 20, 150, 30);
+        campoContraseña.setText("hola");
+        panel.add(campoContraseña);
         
-        modelo.addElement(persona1);
-        modelo.addElement(persona2);
+        String contraseña = "";
         
-        listaDesplegable.setBounds(20, 20, 200, 30);
-        panel.add(listaDesplegable);
+        for (int i = 0; i < campoContraseña.getPassword().length; i++) {
+            contraseña += campoContraseña.getPassword()[i];
+        }
+        
+        System.out.println("Contraseña: "+ contraseña);
     }
 }

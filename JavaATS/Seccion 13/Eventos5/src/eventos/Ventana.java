@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -37,7 +39,7 @@ public class Ventana extends JFrame{
         panel = new JPanel();
         panel.setLayout(null);
         this.add(panel);
-        eventoMovimientoRaton();
+        eventoRuedaDelRaton();
     }
     private void colocarAreaTexto(){
         areaTexto = new JTextArea();
@@ -54,17 +56,18 @@ public class Ventana extends JFrame{
         boton.setFont(new Font("arial",0,15));
         panel.add(boton);
     }
-    private void eventoMovimientoRaton(){
-        MouseMotionListener oyenteMovimientoRaton = new MouseMotionListener() {
+    private void eventoRuedaDelRaton(){
+        MouseWheelListener ruedaRaton = new MouseWheelListener() {
             @Override
-            public void mouseDragged(MouseEvent e) {
-                areaTexto.append("mouseDragged\n");
-            }
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                areaTexto.append("mouseMoved\n");
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                if(e.getPreciseWheelRotation()==-1){
+                    areaTexto.append("Rueda hacia arriba\n");
+                }
+                if(e.getPreciseWheelRotation()==1){
+                    areaTexto.append("Rueda hacia abajo\n");
+                }
             }
         };
-        panel.addMouseMotionListener(oyenteMovimientoRaton);
+        panel.addMouseWheelListener(ruedaRaton);
     }
 }

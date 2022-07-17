@@ -53,23 +53,40 @@ public class Ventana extends JFrame{
         MouseListener oyenteDeRaton = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                areaTexto.append("mouseClicked\n");
+                if (e.isAltDown()) {
+                    areaTexto.append("Alt\n");
+                }
+                else if (e.isControlDown()) {
+                    areaTexto.append("Control\n");
+                }
+                else if (e.isShiftDown()) {
+                    areaTexto.append("Shift\n");
+                }
+                else if (e.isMetaDown()) {
+                    areaTexto.append("Click derecho\n");
+                }
+                else {
+                    areaTexto.append("Click izquierdo\n");
+                }
+                if (e.getClickCount()==3) {
+                    areaTexto.append("Triple click\n");
+                }
             }
             @Override
             public void mousePressed(MouseEvent e) {
-                areaTexto.append("mousePressed\n");
+                //areaTexto.append("mousePressed\n");
             }
             @Override
             public void mouseReleased(MouseEvent e) {
-                areaTexto.append("mouseReleased\n");
+                //areaTexto.append("mouseReleased\n");
             }
             @Override
             public void mouseEntered(MouseEvent e) {
-                areaTexto.append("mouseEntered\n");
+                //areaTexto.append("mouseEntered\n");
             }
             @Override
             public void mouseExited(MouseEvent e) {
-                areaTexto.append("mouseExited\n");
+                //areaTexto.append("mouseExited\n");
             }
         };
         boton.addMouseListener(oyenteDeRaton);

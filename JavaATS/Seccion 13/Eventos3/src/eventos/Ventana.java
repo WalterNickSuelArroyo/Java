@@ -68,8 +68,8 @@ public class Ventana extends JFrame{
                 else {
                     areaTexto.append("Click izquierdo\n");
                 }
-                if (e.getClickCount()==3) {
-                    areaTexto.append("Triple click\n");
+                if (e.getClickCount()==2) {
+                    areaTexto.append("Doble click\n");
                 }
             }
             @Override

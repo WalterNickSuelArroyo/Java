@@ -2574,3 +2574,12 @@ public class Principal {
     }
 }
 ```
+
+# 205. Ejercicio 2 - Escoger deporte favorito (Explicacion del ejercicio)
+# 206. Ejercicio 2 - Escoger deporte favorito (parte 1)
+# 207. Ejercicio 2 - Escoger deporte favorito (parte 2)
+# 208. Ejercicio 2 - Escoger deporte favorito (parte 3)
+# 209. Ejercicio 2 - Escoger deporte favorito (parte 4)
+```java
+
+```

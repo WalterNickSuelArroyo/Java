@@ -1,4 +1,3 @@
-
 package Codigo;
 import java.awt.Color;
 import java.awt.Font;
@@ -63,7 +62,6 @@ public class Ventana  extends JFrame{
                 pulsado=1;
             }
         });
-        
         botonVerde = new JButton("Verde");
         botonVerde.setBounds(230, 230, 130, 50);
         botonVerde.setForeground(Color.GREEN);
@@ -76,7 +74,6 @@ public class Ventana  extends JFrame{
                 pulsado=2;
             }
         });
-        
         botonAzul = new JButton("Azul");
         botonAzul.setBounds(410, 230, 130, 50);
         botonAzul.setForeground(Color.BLUE);
@@ -90,7 +87,6 @@ public class Ventana  extends JFrame{
             }
         });
     }
-
     private void eventoDeRuedaRaton() {
         MouseWheelListener eventoRueda = new MouseWheelListener() {
             @Override

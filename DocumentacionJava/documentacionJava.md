@@ -3918,3 +3918,55 @@ Con el estudio de este capitulo usted podra:
 16. Procedimientos almacenados.
 17. Triggers.
 
+## 287. Conceptos de Bases de Datos
+### ¿Que son las bases de datos?
+Una base de datos es un "almacen" que nos permite guardar grandes cantidades de informacion de forma organizada para que luego podamos encontrar y utilizar facilmente.
+
+### Modelos de bases de datos:
+- Bases de datos jerarquicas.
+- Bases de datos de red.
+- Bases de datos transaccionales.
+- Bases de datos relacionales.
+- Bases de datos multidimensionales.
+- Bases de datos orientadas a objetos.
+- Bases de datos documentales.
+- Bases de datos deductivas
+
+### Bases de datos relacionales:
+Una base de datos relacional es una coleccion de elementos de datos organizados en un conjunto de tablas formalmente descritas desde la que se puede acceder a los datos o volver a montarlos de muchas maneras diferentes sin tener que reorganizar las tablas de la base.
+
+![Diagrama de clases UML](dc11.PNG)
+
+La interfaz estandar de programa de usuario y aplicacion a una base de datos relacional es el lenguaje de consultas estructuradas (SQL). Los comandos de SQL se utilizan tanto para consultas interactivas para obtener informacion de una base de datos relacional y para la recopilacion de datos para los informes.
+
+### Gestores de bases de datos:
+- MySQL.
+- Microsoft SQL Server.
+- Oracle.
+- Microsoft Access.
+- PostgrSQL.
+- DB2.
+
+## 288. Descargar e instalar MySQL
+## 289. Creacion de una base de datos
+
+```sql
+create database prueba;     #crea una base de datos llamado prueba
+```
+
+## 290. Creacion de tablas
+```sql
+create database tienda;
+use tienda;
+
+# Creacion de una tabla para la BD tienda
+create table producto(
+	idProducto int auto_increment primary key,
+    nombre varchar(50) not null,
+    precio decimal(10,2) not null,
+    fecha_venta date default '0000-00-00'
+);
+show tables;  /*Muestra las tablas de nuestra BD*/
+show columns from producto; /*Muestras las columnas de nuestra tabla producto*/
+```
+

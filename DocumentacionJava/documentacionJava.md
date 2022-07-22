@@ -585,7 +585,7 @@ Construir un programa para trabajar con 2 numeros complejos, implemente el sigui
 
 21. Crear un ejecutable .exe
 
-# 169. Ventanas (JFrame) - creacion de una ventana
+## 169. Ventanas (JFrame) - creacion de una ventana
 
 ```java
 package ventana;
@@ -607,7 +607,7 @@ public class Principal {
 }
 ```
 
-# 170. Ventanas (JFrame) - Cierre de ventana y titulo
+## 170. Ventanas (JFrame) - Cierre de ventana y titulo
 
 ```java
 package ventana;
@@ -621,7 +621,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 171. Ventanas (JFrame) - Posicion inicial de la ventana
+## 171. Ventanas (JFrame) - Posicion inicial de la ventana
 
 ```java
 package ventana;
@@ -638,7 +638,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 172. Ventanas (JFrame) - Redimensionar y color de la ventana
+## 172. Ventanas (JFrame) - Redimensionar y color de la ventana
 ```java
 package ventana;
 import java.awt.Color;
@@ -661,7 +661,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 173. Panel (JPanel) - Creacion de un panel
+## 173. Panel (JPanel) - Creacion de un panel
 ```java
 package ventana;
 import java.awt.Color;
@@ -686,7 +686,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 174. Etiquetas (JLabel) - Creacion de una etiqueta
+## 174. Etiquetas (JLabel) - Creacion de una etiqueta
 ```java
 package ventana;
 import java.awt.Color;
@@ -716,7 +716,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 175. Etiquetas (JLabel) - Cambiar el color de letra y el fondo
+## 175. Etiquetas (JLabel) - Cambiar el color de letra y el fondo
 
 ```java
 package ventana;
@@ -751,7 +751,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 176. Etiquetas (JLabel) - Cambiar ubicación del texto
+## 176. Etiquetas (JLabel) - Cambiar ubicación del texto
 ```java
 package ventana;
 import java.awt.Color;
@@ -787,7 +787,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 177. Etiquetas (JLabel) - Modificar fuente del texto
+## 177. Etiquetas (JLabel) - Modificar fuente del texto
 ```java
 package ventana;
 import java.awt.Color;
@@ -825,7 +825,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 178. Etiquetas (JLabel) - Etiqueta tipo imagen
+## 178. Etiquetas (JLabel) - Etiqueta tipo imagen
 ```java
 package ventana;
 import java.awt.Color;
@@ -867,7 +867,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 179. Etiquetas (JLabel) - Cambiar el tamaño de la imagen
+## 179. Etiquetas (JLabel) - Cambiar el tamaño de la imagen
 ```java
 package ventana;
 import java.awt.Color;
@@ -910,7 +910,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 180. Botones (JButton) - Crear un boton
+## 180. Botones (JButton) - Crear un boton
 ```java
 package ventana;
 import java.awt.Color;
@@ -972,7 +972,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 181. Botones (JButton) - Ajustes del boton (Texto)
+## 181. Botones (JButton) - Ajustes del boton (Texto)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1035,7 +1035,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 182. Botones (JButton) - Ajustes del boton (Imagenes)
+## 182. Botones (JButton) - Ajustes del boton (Imagenes)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1109,7 +1109,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 183. Botones (JButton) - Borde del boton
+## 183. Botones (JButton) - Borde del boton
 ```java
 package ventana;
 import java.awt.Color;
@@ -1190,7 +1190,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 184. Radio Botones (JRadioButton) - Crear botones de opcion
+## 184. Radio Botones (JRadioButton) - Crear botones de opcion
 ```java
 package ventana;
 import java.awt.Color;
@@ -1296,7 +1296,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 185. Crear botonoes de activacion (JToggleButton)
+## 185. Crear botonoes de activacion (JToggleButton)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1356,7 +1356,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 186. Crear una caja de texto (JTextField)
+## 186. Crear una caja de texto (JTextField)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1406,7 +1406,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 187. Crear una Area de texto (JTextArea)
+## 187. Crear una Area de texto (JTextArea)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1461,7 +1461,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 188. Agregar barra de desplazamiento(JScrollPane) al area de texto
+## 188. Agregar barra de desplazamiento(JScrollPane) al area de texto
 ```java
 package ventana;
 import java.awt.Color;
@@ -1525,7 +1525,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 189. Crear casillas de verificacion(JCheckBox)
+## 189. Crear casillas de verificacion(JCheckBox)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1590,7 +1590,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 190. Crear listas desplegables(JComboBox)
+## 190. Crear listas desplegables(JComboBox)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1648,7 +1648,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 191. Usar modelos (DefaultComboBoxModel) en las listas desplegables
+## 191. Usar modelos (DefaultComboBoxModel) en las listas desplegables
 ```java
 package ventana;
 import java.awt.Color;
@@ -1748,7 +1748,7 @@ public class Persona {
 }
 ```
 
-# 192. Crear campo de contraseña (JPasswordField)
+## 192. Crear campo de contraseña (JPasswordField)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1814,7 +1814,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 193. Crear tablas (JTable)
+## 193. Crear tablas (JTable)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1887,7 +1887,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 194. Crear listas (JList)
+## 194. Crear listas (JList)
 ```java
 package ventana;
 import java.awt.Color;
@@ -1967,7 +1967,7 @@ public class Ventana extends JFrame{
 }
 ```
 
-# 195. Eventos - Oyente de accion(ActionListener)
+## 195. Eventos - Oyente de accion(ActionListener)
 ```java
 package eventos;
 import java.awt.Font;
@@ -2047,7 +2047,7 @@ public class Principal {
 }
 ```
 
-# 196. Eventos - Oyente de raton(MouseListener)
+## 196. Eventos - Oyente de raton(MouseListener)
 ```java
 package eventos;
 import java.awt.Font;
@@ -2138,7 +2138,7 @@ public class Principal {
 }
 ```
 
-# 197. Eventos - Metodos de los eventos del raton(MouseEvent)
+## 197. Eventos - Metodos de los eventos del raton(MouseEvent)
 ```java
 package eventos;
 import java.awt.Font;
@@ -2235,7 +2235,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 198. Eventos - oyentes del movimiento del raton(MouseMotionListener)
+## 198. Eventos - oyentes del movimiento del raton(MouseMotionListener)
 ```java
 package eventos;
 import java.awt.Font;
@@ -2308,7 +2308,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 199. Eventos - Oyente de la rueda del raton(MouseWheelListener)  
+## 199. Eventos - Oyente de la rueda del raton(MouseWheelListener)  
 ```java
 package eventos;
 import java.awt.Font;
@@ -2384,7 +2384,7 @@ public class Ventana extends JFrame{
     }
 }
 ```
-# 200. Eventos - Oyente de teclado(KeyListener)
+## 200. Eventos - Oyente de teclado(KeyListener)
 ```java
 package eventos;
 import java.awt.Font;
@@ -2491,10 +2491,10 @@ public class Ventana extends JFrame{
     }
 }
 ``` 
-# 201. Ejercicio 1 - Contabilizar clics (Explicacion Ejercicio)
-# 202. Ejercicio 1 - Contabilizar clics (parte 1)
-# 203. Ejercicio 1 - Contabilizar clics (parte 2)
-# 204. Ejercicio 1 - Contabilizar clics (parte 3)
+## 201. Ejercicio 1 - Contabilizar clics (Explicacion Ejercicio)
+## 202. Ejercicio 1 - Contabilizar clics (parte 1)
+## 203. Ejercicio 1 - Contabilizar clics (parte 2)
+## 204. Ejercicio 1 - Contabilizar clics (parte 3)
 ```java
 package Ejercicio1_Ejemplo;
 import java.awt.Font;
@@ -2575,11 +2575,11 @@ public class Principal {
 }
 ```
 
-# 205. Ejercicio 2 - Escoger deporte favorito (Explicacion del ejercicio)
-# 206. Ejercicio 2 - Escoger deporte favorito (parte 1)
-# 207. Ejercicio 2 - Escoger deporte favorito (parte 2)
-# 208. Ejercicio 2 - Escoger deporte favorito (parte 3)
-# 209. Ejercicio 2 - Escoger deporte favorito (parte 4)
+## 205. Ejercicio 2 - Escoger deporte favorito (Explicacion del ejercicio)
+## 206. Ejercicio 2 - Escoger deporte favorito (parte 1)
+## 207. Ejercicio 2 - Escoger deporte favorito (parte 2)
+## 208. Ejercicio 2 - Escoger deporte favorito (parte 3)
+## 209. Ejercicio 2 - Escoger deporte favorito (parte 4)
 ```java
 
 package Codigo;
@@ -2696,10 +2696,10 @@ public class Ventana  extends JFrame{
 }
 ```
 
-# 210. Ejercicio 3 - Jugar con los colores RGB (Explicacion del ejercicio)
-# 211. Ejercicio 3 - Jugar con los colores RGB (Parte 1)
-# 212. Ejercicio 3 - Jugar con los colores RGB (Parte 2)
-# 213. Ejercicio 3 - Jugar con los colores RGB (Parte 3)
+## 210. Ejercicio 3 - Jugar con los colores RGB (Explicacion del ejercicio)
+## 211. Ejercicio 3 - Jugar con los colores RGB (Parte 1)
+## 212. Ejercicio 3 - Jugar con los colores RGB (Parte 2)
+## 213. Ejercicio 3 - Jugar con los colores RGB (Parte 3)
 ```java
 package Codigo;
 import java.awt.Color;
@@ -2831,11 +2831,11 @@ public class Ventana  extends JFrame{
     }
 }
 ```
-# 214. El diseñador de Interfaces Graficas de NetBeans
-# 215. Ejercicio 4 - Interfaz para un grupo de personas (parte 1)
-# 216. Ejercicio 4 - Interfaz para un grupo de personas (parte 2)
-# 217. Ejercicio 4 - Interfaz para un grupo de personas (parte 3)
-# 218. Ejercicio 4 - Interfaz para un grupo de personas (parte 4)
+## 214. El diseñador de Interfaces Graficas de NetBeans
+## 215. Ejercicio 4 - Interfaz para un grupo de personas (parte 1)
+## 216. Ejercicio 4 - Interfaz para un grupo de personas (parte 2)
+## 217. Ejercicio 4 - Interfaz para un grupo de personas (parte 3)
+## 218. Ejercicio 4 - Interfaz para un grupo de personas (parte 4)
 ```java
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -3182,10 +3182,10 @@ public class Persona {
 ```
 ![Diagrama de clases UML](dc7.PNG)
 
-# 219. Ejercicio 5 - Desarrollando un cronometro (Explicacion del ejercicio)
-# 220. Ejercicio 5 - Desarrollando un cronometro (Parte 1)
-# 221. Ejercicio 5 - Desarrollando un cronometro (Parte 2)
-# 222. Ejercicio 5 - Desarrollando un cronometro (Parte 3)
+## 219. Ejercicio 5 - Desarrollando un cronometro (Explicacion del ejercicio)
+## 220. Ejercicio 5 - Desarrollando un cronometro (Parte 1)
+## 221. Ejercicio 5 - Desarrollando un cronometro (Parte 2)
+## 222. Ejercicio 5 - Desarrollando un cronometro (Parte 3)
 ```java
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -3405,9 +3405,9 @@ public class Ventana extends javax.swing.JFrame {
 ```
 ![Diagrama de clases UML](dc8.PNG)
 
-# 223. Ejercicio 6 - Interfaz grafica para un login (Explicacion del ejercicio)
-# 224. Ejercicio 6 - Interfaz grafica para un login (parte 1)
-# 225. Ejercicio 6 - Interfaz grafica para un login (parte 2)
+## 223. Ejercicio 6 - Interfaz grafica para un login (Explicacion del ejercicio)
+## 224. Ejercicio 6 - Interfaz grafica para un login (parte 1)
+## 225. Ejercicio 6 - Interfaz grafica para un login (parte 2)
 ```java
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -3600,15 +3600,15 @@ public class Ventana extends javax.swing.JFrame {
 
 ![Diagrama de clases UML](dc9.PNG)
 
-# 226. Diseños (Layout) - FlowLayout
-# 227. Diseños (Layout) - BoxLayout
-# 228. Diseños (Layout) - BorderLayout
-# 229. Diseños (Layout) - GridLayout
-# 230. Diseños (Layout) - GridBagLayout
-# 231. Ejercicio 7 - Cartelera de cine (Explicacion del ejercicio)
-# 232. Ejercicio 7 - Cartelera de cine (parte 1)
-# 233. Ejercicio 7 - Cartelera de cine (parte 2)
-# 234. Ejercicio 7 - Cartelera de cine (parte 3)
+## 226. Diseños (Layout) - FlowLayout
+## 227. Diseños (Layout) - BoxLayout
+## 228. Diseños (Layout) - BorderLayout
+## 229. Diseños (Layout) - GridLayout
+## 230. Diseños (Layout) - GridBagLayout
+## 231. Ejercicio 7 - Cartelera de cine (Explicacion del ejercicio)
+## 232. Ejercicio 7 - Cartelera de cine (parte 1)
+## 233. Ejercicio 7 - Cartelera de cine (parte 2)
+## 234. Ejercicio 7 - Cartelera de cine (parte 3)
 ```java
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -3848,4 +3848,73 @@ public class Ventana extends javax.swing.JFrame {
 ```
 
 ![Diagrama de clases UML](dc10.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# SECCION 15: BASES DE DATOS EN MYSQL
+
+## 286. Introduccion al capitulo de Base de datos en MySQL
+
+### Objetivos:
+
+Con el estudio de este capitulo usted podra:
+- Crear bases de datos desde cero con MySQL.
+- Podras realizar inserciones, consultas, modificaciones y eliminaciones sobre tablas.
+- Aprenderas sobre vistas, procedimientos almacenados y triggers.
+
+### Contenido:
+1. Conceptos de Bases de datos.
+2. Descargar e instalar MySQL.
+3. Creacion de una base de datos.
+4. Creacion de tablas.
+5. Conceptos de relaciones entre tablas.
+6. Relacion de uno a uno.
+7. Relacion de uno a muchos.
+8. Relacion de muchos a muchos
+9. Insertar registros en las tablas.
+10. Modificar registros de una tabla.
+11. Eliminar registros de una tabla.
+12. Consultas en una tabla.
+13. Consultas mas avanzadas con operadores.
+14. Consultas en varias tablas.
+15. Vistas.
+16. Procedimientos almacenados.
+17. Triggers.
 

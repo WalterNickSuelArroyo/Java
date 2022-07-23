@@ -4016,3 +4016,65 @@ use tienda;
 ![Relacion de muchos a muchos](dc14.PNG)
 ![Relacion de muchos a muchos](dc24.PNG)
 
+## 295. Insertar registros en las tablas
+```sql
+# Insertar registros en la tabla categoria
+insert into categoria values (NULL, "Bebidas");
+
+# Otra manera de insertar registros 
+insert into categoria (nombre) values ("Aceite");
+
+# Insertar varios registros
+insert into categoria (nombre) values
+("Detergentes"),("Galletas"),("Chocolates"),("Frituras");
+
+# Insertar registros en la tabla producto
+insert into producto (nombre,precio,fecha_venta,idCategoria) values
+("Gaseosa Coca Cola",5.5,"2018-05-31",1),
+("Gaseosa Inka Cola",5.4,"2018-05-30",1),
+("Cerveza Heineken",3.6,curdate(),1),/*Con curdate() se pone la fecha actual*/
+("Aceite de Oliva",2.7,curdate(),2);
+
+# Insertar registros en la tabla codigo de barras
+insert into codigobarras (serial,idProducto) values
+("1231231231",1),("45454545",2),("767666556",3),("65776744",11);
+
+# Mostrar todos los registros que hay en categoria
+select * from categoria;
+select * from producto;
+select * from codigobarras;
+```
+
+## 296. Modificar registros de una tabla
+```sql
+# Modificar registros de categoria
+update categoria set nombre = "Bebidas con gas" where idCategoria = 1;
+
+# Modificar registros de producto pero en varias columnas
+update producto set nombre = "Gaseosa Pepsi",precio = 5.2 where idProducto = 2;
+
+# Vamos a alterar la tabla producto y agregaremos la columna cantidad
+# Luego modificaremos  esa cantidad
+update producto set cantidad = 5 where idproducto=1;
+
+select * from categoria;
+select * from producto;
+```
+
+## 297. Eliminar registros de una tabla
+```sql
+# Eliminar registros de una tabla
+delete from producto where idProducto = 1;
+
+/*Como la relacion entre producto y codigo de barras es de 
+1 a 1 cuando eliminamos un registro de la tabla productos, automaticamente
+se elimina el registro de codigo de barras. En una relacion de 
+uno a muchos, cuando yo elimino una categoria se elimina todos
+los productos que pertenecen a esa categoria*/
+
+select * from codigobarras;
+select * from producto;
+select * from categoria;
+```
+
+

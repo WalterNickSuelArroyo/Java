@@ -4077,4 +4077,62 @@ select * from producto;
 select * from categoria;
 ```
 
+## 298. Consultas en una tabla
+```sql
+# Consultas en las tablas
+select nombre from producto;
+
+# Consultar varias columnas
+select nombre,precio,cantidad from producto;
+
+# Agregando un alias temporal a la columna
+select nombre as 'Nombre del producto' from producto;
+
+# Consulta filtrada o especifica
+select nombre,precio,fecha_venta from producto where idCategoria = 2;
+
+select nombre,precio,fecha_venta from producto where idProducto = 1;
+
+select nombre,precio,fecha_venta from producto where cantidad>100;
+
+select min(cantidad), max(cantidad) from producto;
+
+select min(cantidad) as 'cantidad minima', max(cantidad) as 'cantidad maxima' from producto;
+
+select nombre,precio from producto order by nombre asc;
+
+select * from producto;
+```
+
+# 299. Consultas mas avanzadas con operadores
+
+```sql
+# Consultas mas avanzadas con operadores
+select * from producto where idCategoria = 1 and cantidad>100;
+
+select * from producto where idCategoria = 1 or cantidad>100;
+
+select * from producto where idCategoria !=1; /*Tambien se puede utilizar <>*/
+
+select * from producto where precio is null;
+
+select * from producto where precio is not null;
+
+select * from producto where precio between 3 and 6;
+
+select * from producto where precio not between 3 and 6;
+
+select * from producto where cantidad = 50+50;
+
+select * from producto where nombre like 'Gaseosa%';
+
+select * from producto where nombre like '%o';
+
+select * from producto where nombre like 'a%';
+
+select * from producto where nombre like '%osa%';
+
+select * from producto;
+```
+
 

@@ -3970,7 +3970,7 @@ show tables;  /*Muestra las tablas de nuestra BD*/
 show columns from producto; /*Muestras las columnas de nuestra tabla producto*/
 ```
 
-## 290. Conceptos de relaciones entre tablas
+## 291. Conceptos de relaciones entre tablas
 ### Relacion entre tablas:
 Para que los datos de las tablas se puedan seleccionar, encontrar y procesar de forma rapida y eficaz, es necesario que las tablas no se encuentren aisladas unas de otras.
 
@@ -3993,3 +3993,13 @@ En este caso un registro estara relacionado son con otro, pero este segundo podr
 En las relaciones de muchos a muchos a cada registro de la tabla A, se le pueden asociar varios registros de la tabla B, y cada registro de la tabla B puede estar relacionado con mas de un registro de la tabla A.
 - Cuando hay relacion de muchos a muchos es conveniente agregar una tercera tabla para establecer la relacion
 ![Relacion de uno a muchos](dc14.PNG)
+
+## 292. Relacion de uno a uno
+```sql
+create database tienda;
+use tienda;
+```
+![Relacion de uno a uno](dc16.PNG)
+![Relacion de uno a uno](dc17.PNG)
+![Relacion de uno a uno](dc18.PNG)
+![Relacion de uno a uno](dc15.PNG)

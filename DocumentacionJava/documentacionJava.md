@@ -4003,3 +4003,8 @@ use tienda;
 ![Relacion de uno a uno](dc17.PNG)
 ![Relacion de uno a uno](dc18.PNG)
 ![Relacion de uno a uno](dc15.PNG)
+
+## 293. Relacion de uno a muchos
+![Relacion de uno a muchos](dc19.PNG)
+![Relacion de uno a uno](dc20.PNG)
+![Relacion de uno a uno](dc13.PNG)

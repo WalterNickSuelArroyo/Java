@@ -3970,3 +3970,26 @@ show tables;  /*Muestra las tablas de nuestra BD*/
 show columns from producto; /*Muestras las columnas de nuestra tabla producto*/
 ```
 
+## 290. Conceptos de relaciones entre tablas
+### Relacion entre tablas:
+Para que los datos de las tablas se puedan seleccionar, encontrar y procesar de forma rapida y eficaz, es necesario que las tablas no se encuentren aisladas unas de otras.
+
+Las tablas tienen que estar relacionadas con otras formando estructuras relacionales. La relacion es una asociacion establecida entre campos comunes (columnas) en dos tablas. Los campos que entran en relacion pueden llamarse de distinta manera, pero tienen que ser del mismo tipo de datos.
+
+Las relaciones pueden ser de 3 tipos:
+- Relacion de uno a uno.
+- Relacion de uno a muchos.
+- Relacion de muchos a muchos
+
+### Relacion de uno a uno:
+Estas se dan cuando un registro esta relacionado con otro y con ese solamente, y a su vez este segundo tambien estara relacionado solamente con el primero.
+![Relacion de uno a uno](dc12.PNG)
+
+### Relacion de uno a muchos:
+En este caso un registro estara relacionado son con otro, pero este segundo podra estar relacionado con mas de uno.
+![Relacion de uno a muchos](dc13.PNG)
+
+### Relacion de muchos a muchos:
+En las relaciones de muchos a muchos a cada registro de la tabla A, se le pueden asociar varios registros de la tabla B, y cada registro de la tabla B puede estar relacionado con mas de un registro de la tabla A.
+- Cuando hay relacion de muchos a muchos es conveniente agregar una tercera tabla para establecer la relacion
+![Relacion de uno a muchos](dc14.PNG)

@@ -4169,6 +4169,54 @@ inner join proveedores as pvv on pvv.idProveedores = upp.idProveedor
 where p.cantidad>=100;
 ```
 
+## 301. Vistas
+- Es una forma sencilla de guardar una consulta muy extensa
+
+```sql
+# Vistas
+create view vista_5tablas as
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras',c.nombre as 'Categoria',pvv.nombre as 'Proveedor' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto
+inner join categoria c on p.idCategoria = c.idCategoria
+inner join union_pp as upp on p.idProducto = upp.idProducto
+inner join proveedores as pvv on pvv.idProveedores = upp.idProveedor
+where p.cantidad>=100;
+
+select * from vista_5tablas;
+
+
+
+create view vista_producto_categoria as
+select p.nombre,p.precio,p.cantidad,c.nombre as 'Categoria'
+from producto as p
+inner join categoria as c on p.idCategoria=c.idCategoria;
+
+select * from vista_producto_categoria;
+```
+
+## 302. Procedimientos almacenados
+
+```sql
+# Procedimientos Almacenados
+
+# Creacion de un procedimiento almacenado
+delimiter //
+create procedure productosXcategoria (in id int)
+begin
+	select * from producto where idCategoria = id;
+end//
+
+delimiter ;
+
+# Llamada al procedimiento almacenado
+call productosXcategoria(1);
+
+# Eliminar un procedimiento almacenado
+drop procedure productosXcategoria;
+
+# Eliminar una vista
+drop view vista_producto_categoria;
+```
 
 
 

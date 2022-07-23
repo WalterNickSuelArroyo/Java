@@ -4135,4 +4135,40 @@ select * from producto where nombre like '%osa%';
 select * from producto;
 ```
 
+## 300. Consultas en varias tablas
+```sql
+# Consultas en varia tablas
+select * from producto p inner join categoria as c on p.idCategoria=c.idCategoria;
+
+select p.nombre,p.precio,p.cantidad,c.nombre as 'Categoria' from producto p inner join categoria as c on p.idCategoria=c.idCategoria;
+
+select p.nombre,p.precio,p.cantidad,c.nombre as 'Categoria' from producto p inner join categoria as c on p.idCategoria=c.idCategoria where p.cantidad>100;
+
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto;
+
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras',c.nombre as 'Categoria' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto
+inner join categoria c on p.idCategoria = c.idCategoria;
+
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras',c.nombre as 'Categoria' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto
+inner join categoria c on p.idCategoria = c.idCategoria;
+
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras',c.nombre as 'Categoria',pvv.nombre as 'Proveedor' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto
+inner join categoria c on p.idCategoria = c.idCategoria
+inner join union_pp as upp on p.idProducto = upp.idProducto
+inner join proveedores as pvv on pvv.idProveedores = upp.idProveedor;
+
+select p.nombre as 'Producto',cb.serial as 'Codigo Barras',c.nombre as 'Categoria',pvv.nombre as 'Proveedor' from producto p
+inner join codigobarras cb on p.idProducto = cb.idProducto
+inner join categoria c on p.idCategoria = c.idCategoria
+inner join union_pp as upp on p.idProducto = upp.idProducto
+inner join proveedores as pvv on pvv.idProveedores = upp.idProveedor
+where p.cantidad>=100;
+```
+
+
+
 

@@ -4006,5 +4006,13 @@ use tienda;
 
 ## 293. Relacion de uno a muchos
 ![Relacion de uno a muchos](dc19.PNG)
-![Relacion de uno a uno](dc20.PNG)
-![Relacion de uno a uno](dc13.PNG)
+![Relacion de uno a muchos](dc20.PNG)
+![Relacion de uno a muchos](dc13.PNG)
+
+## 294. Relacion de muchos a muchos
+![Relacion de muchos a muchos](dc21.PNG)
+![Relacion de muchos a muchos](dc22.PNG)
+![Relacion de muchos a muchos](dc23.PNG)
+![Relacion de muchos a muchos](dc14.PNG)
+![Relacion de muchos a muchos](dc24.PNG)
+

@@ -4218,5 +4218,45 @@ drop procedure productosXcategoria;
 drop view vista_producto_categoria;
 ```
 
+## 303. Triggers
+Son eventos que se van a ejectuar automaticamente cuando suceda una determinada accion
+```sql
+# Triggers
+/*Vamos a insertar algo en nuestra tabla temporal antes de que se inserte
+en la tabla categoria*/
+Delimiter |
+create trigger insertarTemp before insert on categoria
+for each row
+begin
+	insert into temporal(categoria) values (new.nombre);
+end |
+
+insert into categoria (nombre) values ("Embolsados");
+
+select * from temporal;
+select * from categoria;
+select * from proveedores;
+
+/* Este video arroja algunos errores*/
+```
+
+## 304. Respaldo y restauracion de una base de datos en MySQL
+
+### Respaldo de una BD (Backup)
+1. Damos clic en server
+2. Data export
+3. Seleccionamos la base de datos
+4. Seleccionamos las tablas que queremos respaldar
+5. Guardamos el archivo en un documento sql (Export to self-contained file) y seleccionamos ubicacion
+6. Start Export
+
+### Restauracion del respaldo de la BD
+1. Damos clic en server
+2. Data import
+3. Seleccionamos el archivo sql (Import from self-contained file).
+4. Escogemos la base de datos donde se abrira o creamos una(new).
+4. Start Import
+
+
 
 

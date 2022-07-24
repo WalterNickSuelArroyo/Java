@@ -4257,6 +4257,36 @@ select * from proveedores;
 4. Escogemos la base de datos donde se abrira o creamos una(new).
 4. Start Import
 
+# Seccion 16: Conexion entre Java y Base de datos en MySQL
+## 305. Intro al capitulo de conexion entre java y BD en MySQL
+### Objetivos:
+Con el estudio de este capitulo usted podra:
+- Hacer la conexion entre sus aplicaciones en java y sus BD en MySQL.
+- Podra llenar diferentes componentes con registros de su BD.
+- Aprendera a registrar usuarios, iniciar sesion y dar privilegios a los usuarios.
 
+### Contenido:
+1. Conector de MySQL para Java
+2. Conexion entre Java y Base de datos en MySQL.
+3. Que es un CRUD.
+4. Que es el Modelo-Vista-Controlador(MVC).
+5. CRUD con MVC.
+6. Cargar tabla de BD en un JTable
+7. CRUD con JTable.
+8. JComboBox anidados con datos de una BD.
+9. Guardar una imagen en una BD.
+10. Reportes en PDF.
+11. Reportes en Excel.
+12. JCalendar con BD en Java.
+13. Mas controles con BD en Java (JRadioButton, JCheckBox, JSpinner)
+14. Registros e inicio de sesion de usuarios.
 
+## 306. Conector de MySQL para Java
+Debemos descargar el conector entre java y mysql (Connector/J).
+Una vez descargado , cada vez que creamos un proyecto debemos importar ese conector.
+1. Una vez creado el proyecto nos vamos a la carpeta libreria del proyecto.
+2. Clic derecho y seleccionamos Add JAR/Folder
+3. Seleccionamos el conector
+
+## 307. Conexion entre Java y BD en MySQL
 

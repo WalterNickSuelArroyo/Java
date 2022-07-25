@@ -2,6 +2,8 @@ package aplicacion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 public class Conexion extends javax.swing.JFrame {
@@ -49,6 +51,27 @@ public class Conexion extends javax.swing.JFrame {
 
     private void botonConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConectarActionPerformed
         Connection conexion = getConnection();
+        PreparedStatement ps;
+        ResultSet rs;      
+        try {
+            ps=conexion.prepareStatement("select * from persona");
+            rs=ps.executeQuery();
+            
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, "Nombre: "+rs.getString("nombre")+
+                        "\nDomicilio: "+rs.getString("domicilio")+
+                        "\nCelular: "+rs.getString("celular")+
+                        "\nCorreo Electronico: "+rs.getString("correo_electronico")+
+                        "\nFecha Nacimiento: "+String.valueOf(rs.getDate("fecha_nacimiento"))+
+                        "\nGenero: "+rs.getString("genero"));
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "No existen registros");
+            }
+            conexion.close();
+        } catch (Exception ex) {
+            System.err.println("Error, "+ex);
+        }
     }//GEN-LAST:event_botonConectarActionPerformed
    
     public Connection getConnection(){

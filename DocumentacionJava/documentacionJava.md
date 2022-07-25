@@ -4959,3 +4959,93 @@ public class Persona extends javax.swing.JFrame {
 }
 ```
 ![Interfaz CRUD](dc27.png)
+
+## 314. ¿Que es el modelo vista controlador(MVC)?
+- El MVC o Modelo-Vista-Controlador es un patron de arquitectura de software que, utilizando 3 componentes separa la logica de la aplicacion de la logica de la vista en una aplicacion. Es una arquitectura importante puesto que se utiliza tanto en componentes graficos basicos hasta sistemas empresariales.
+
+### Modelo
+Se encarga de los datos, generalmente consultando la base de datos. Actualizaciones, consultas, busquedas, etc.
+### Vista
+Son la representacion visual de los datos, todo lo que tenga que ver con la interfaz grafica va aqui. Ni el modelo ni el controlador se preocupan de como se veran los datos, esa responsabilidad es unicamente de la vista.
+### Controlador
+Se encarga de controlar, recibe las ordenes del usuario a traves de los eventos de la interfaz grafica y se encarga de solicitar los datos al modelo y de comunicarselos a la vista.
+
+## 315. Ejemplo sencillo de Modelo-Vista-Controlador(MVC)
+```java
+package ejemplo_mvc;
+import controlador.Controlador;
+import modelo.Modelo;
+import vista.Vista;
+
+public class Ejemplo_MVC {
+    public static void main(String[] args) {
+        Vista vista = new Vista();
+        Modelo modelo = new Modelo();
+        Controlador controlador = new Controlador(vista, modelo);
+        
+        controlador.iniciar();
+        vista.setVisible(true);
+    }
+}
+```
+```java
+package modelo;
+public class Modelo {
+    private int numero1;
+    private int numero2;
+    private int resultado;
+
+    public int getNumero1() {
+        return numero1;
+    }
+    public void setNumero1(int numero1) {
+        this.numero1 = numero1;
+    }
+    public int getNumero2() {
+        return numero2;
+    }
+    public void setNumero2(int numero2) {
+        this.numero2 = numero2;
+    }
+    public int getResultado() {
+        return resultado;
+    }
+    public void setResultado(int resultado) {
+        this.resultado = resultado;
+    }
+    public int sumar(){
+        resultado = numero1+numero2;
+        return resultado;
+    }
+}
+```
+```java
+package controlador;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import modelo.Modelo;
+import vista.Vista;
+
+public class Controlador implements ActionListener{
+    private Vista vista;
+    private Modelo modelo;
+
+    public Controlador(Vista vista, Modelo modelo) {
+        this.vista = vista;
+        this.modelo = modelo;
+        vista.botonSumar.addActionListener(this);
+    }
+    public void iniciar(){
+        vista.setTitle("MVC Sumar");
+        vista.setLocationRelativeTo(null);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        modelo.setNumero1(Integer.parseInt(vista.cajaNumero1.getText()));
+        modelo.setNumero2(Integer.parseInt(vista.cajaNumero2.getText()));
+        modelo.sumar();
+        
+        vista.cajaResultado.setText(String.valueOf(modelo.getResultado()));
+    }    
+}
+```
